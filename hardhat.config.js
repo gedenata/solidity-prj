@@ -27,13 +27,7 @@ module.exports = {
       },
     },
   },
-  defaultNetwork: "rinkeby",
-  networks: {
-    rinkeby: {
-      url: "https://eth-rinkeby.alchemyapi.io/v2/123abc123abc123abc123abc123abcde",
-      accounts: [privateKey1, privateKey2],
-    },
-  },
+  defaultNetwork: "hardhat",
   paths: {
     artifacts: "./artifacts",
     sources: "./contracts",
