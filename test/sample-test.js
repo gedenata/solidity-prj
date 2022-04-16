@@ -1,6 +1,9 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
+const hre = require("hardhat");
+const assert = require("assert");
+
 describe("Greeter", function () {
   it("Should return the new greeting once it's changed", async function () {
     const Greeter = await ethers.getContractFactory("Greeter");
@@ -15,5 +18,11 @@ describe("Greeter", function () {
     await setGreetingTx.wait();
 
     expect(await greeter.greet()).to.equal("Hola, mundo!");
+  });
+});
+
+describe("Hardhat Runtime Environment", function () {
+  it("Should have a config field", function () {
+    assert.notEqual(hre.config, undefined);
   });
 });
