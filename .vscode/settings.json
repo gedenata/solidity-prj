@@ -1,8 +1,14 @@
 {
     "cSpell.words": [
+        "camelcase",
         "envtest",
         "Hola",
+        "linkaddress",
+        "mixedcase",
         "mundo",
-        "nomiclabs"
+        "nomiclabs",
+        "reentrancy",
+        "snakecase",
+        "solhint"
     ]
 }
