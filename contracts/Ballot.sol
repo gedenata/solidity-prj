@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Unlicense
-pragma solidity >=0.7.0 <0.9.0;
+pragma solidity ^0.8.0;
 
 /// @title Voting with delegation.
 contract Ballot {
@@ -42,10 +42,7 @@ contract Ballot {
     }
 
     function giveRightToVote(address voter) external {
-        require(
-            msg.sender == chairperson,
-            "Only chairperson can give right to vote."
-        );
+        require(msg.sender == chairperson, "Can give right to vote.");
         require(!voters[voter].voted, "The voter already voted.");
         voters[voter].weight = 1;
     }
